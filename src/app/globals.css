@@ -1,0 +1,403 @@
+@import "tailwindcss";
+
+/* ══════════════════════════════════════════════════════════════════════════
+   FOLIVIO - PAPER, INK, ONE GREEN
+
+   The product is about presenting a person. The surface should feel like a
+   well made career publication: warm paper, dark ink, hairline rules, and a
+   single deep green that carries action and intent. No rainbow gradients, no
+   glass, no neon. Everything that is not the accent is a step of the neutral
+   ladder.
+
+   Typography carries the brand: an editorial serif for statements, a tight
+   grotesque for the interface, and mono small caps for labels and figures.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --paper: 45 26% 94%;
+  --surface: 45 33% 97%;
+  --card: 0 0% 100%;
+  --ink: 60 15% 7%;
+  --muted: 55 8% 42%;
+  --line: 48 18% 85%;
+  --line-soft: 48 20% 90%;
+
+  --accent: 158 57% 24%;
+  --accent-hover: 158 60% 18%;
+  --accent-soft: 157 32% 92%;
+  --accent-ink: 158 60% 14%;
+
+  --clay: 20 60% 44%;
+  --success: 157 60% 29%;
+  --warning: 32 78% 36%;
+  --danger: 5 62% 42%;
+
+  --ring: 158 57% 24%;
+  --selection: 158 45% 82%;
+
+  --shadow-sm: 0 1px 2px rgb(22 21 15 / 0.04), 0 1px 1px rgb(22 21 15 / 0.03);
+  --shadow-md: 0 12px 30px -18px rgb(22 21 15 / 0.28), 0 2px 6px -3px rgb(22 21 15 / 0.06);
+  --shadow-lg: 0 34px 70px -34px rgb(22 21 15 / 0.32), 0 8px 20px -12px rgb(22 21 15 / 0.12);
+  --shadow-sheet: 0 40px 80px -30px rgb(22 21 15 / 0.32), 0 2px 0 rgb(255 255 255 / 0.6) inset;
+
+  --radius: 14px;
+  color-scheme: light;
+}
+
+.dark {
+  --paper: 60 8% 4%;
+  --surface: 60 8% 6%;
+  --card: 60 7% 8%;
+  --ink: 48 21% 92%;
+  --muted: 52 8% 60%;
+  --line: 55 9% 17%;
+  --line-soft: 55 9% 13%;
+
+  --accent: 157 45% 55%;
+  --accent-hover: 157 47% 64%;
+  --accent-soft: 158 30% 13%;
+  --accent-ink: 157 55% 84%;
+
+  --clay: 22 65% 62%;
+  --success: 157 45% 55%;
+  --warning: 32 74% 62%;
+  --danger: 5 70% 65%;
+
+  --ring: 157 45% 55%;
+  --selection: 158 40% 26%;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 16px 34px -20px rgb(0 0 0 / 0.9), 0 2px 6px -3px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 40px 80px -40px rgb(0 0 0 / 0.95), 0 8px 20px -12px rgb(0 0 0 / 0.6);
+  --shadow-sheet: 0 40px 90px -30px rgb(0 0 0 / 0.9);
+
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: hsl(var(--paper));
+  --color-surface: hsl(var(--surface));
+  --color-card: hsl(var(--card));
+  --color-background: hsl(var(--paper));
+  --color-foreground: hsl(var(--ink));
+  --color-ink: hsl(var(--ink));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted));
+  --color-line: hsl(var(--line));
+  --color-line-soft: hsl(var(--line-soft));
+  --color-border: hsl(var(--line));
+  --color-accent: hsl(var(--accent));
+  --color-accent-hover: hsl(var(--accent-hover));
+  --color-accent-soft: hsl(var(--accent-soft));
+  --color-accent-ink: hsl(var(--accent-ink));
+  --color-clay: hsl(var(--clay));
+  --color-success: hsl(var(--success));
+  --color-warning: hsl(var(--warning));
+  --color-danger: hsl(var(--danger));
+  --color-ring: hsl(var(--ring));
+
+  --radius-card: var(--radius);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-instrument), "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+
+  --shadow-card: var(--shadow-sm);
+  --shadow-float: var(--shadow-md);
+  --shadow-lift: var(--shadow-lg);
+
+  --animate-rise: rise 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade: fade 400ms ease both;
+  --animate-drift: drift 9s ease-in-out infinite;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--line));
+  }
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+  }
+  body {
+    background: hsl(var(--paper));
+    color: hsl(var(--ink));
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: hsl(var(--selection));
+    color: hsl(var(--ink));
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.02em;
+  }
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* One deliberate focus treatment for controls that are not text fields. */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring) / 0.55);
+    outline-offset: 2px;
+  }
+  /* Text inputs carry their own focus language (border + halo), never the UA
+     outline. Requests were explicit about this: no outlines on inputs. */
+  input,
+  textarea,
+  select,
+  [contenteditable="true"] {
+    outline: none !important;
+  }
+  input:focus,
+  textarea:focus,
+  select:focus,
+  [contenteditable="true"]:focus {
+    outline: none !important;
+    box-shadow: none;
+  }
+  option {
+    background-color: hsl(var(--card));
+    color: hsl(var(--ink));
+  }
+  .grid > *,
+  .flex > * {
+    min-width: 0;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--line));
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted) / 0.5);
+    background-clip: content-box;
+  }
+}
+
+@layer components {
+  /* ── typography helpers ───────────────────────────────────────────────── */
+  .display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 0.98;
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: hsl(var(--muted));
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+
+  /* ── surfaces ─────────────────────────────────────────────────────────── */
+  .card-paper {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--line));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+  }
+  .card-flat {
+    background: hsl(var(--surface));
+    border: 1px solid hsl(var(--line-soft));
+    border-radius: var(--radius);
+  }
+  .rule {
+    border-top: 1px solid hsl(var(--line));
+  }
+
+  /* ── fields: the one place focus is drawn ─────────────────────────────── */
+  .field {
+    width: 100%;
+    border-radius: 11px;
+    border: 1px solid hsl(var(--line));
+    background: hsl(var(--card));
+    color: hsl(var(--ink));
+    font-size: 13.5px;
+    line-height: 1.45;
+    padding: 10px 12px;
+    transition:
+      border-color 160ms ease,
+      box-shadow 160ms ease,
+      background-color 160ms ease;
+  }
+  .field::placeholder {
+    color: hsl(var(--muted) / 0.72);
+  }
+  .field:hover {
+    border-color: hsl(var(--muted) / 0.4);
+  }
+  .field:focus,
+  .field:focus-visible {
+    outline: none !important;
+    border-color: hsl(var(--accent) / 0.75);
+    box-shadow: 0 0 0 3px hsl(var(--accent) / 0.1);
+    background: hsl(var(--card));
+  }
+  .field:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  .field-lg {
+    padding: 13px 15px;
+    font-size: 14.5px;
+    border-radius: 12px;
+  }
+
+  /* ── ambient paper texture ───────────────────────────────────────────── */
+  .paper-dots {
+    background-image: radial-gradient(hsl(var(--muted) / 0.22) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .underlay-accent {
+    background:
+      radial-gradient(60rem 30rem at 12% -10%, hsl(var(--accent) / 0.09), transparent 60%),
+      radial-gradient(40rem 24rem at 96% 4%, hsl(var(--clay) / 0.07), transparent 62%);
+  }
+
+  /* ── motion helpers ──────────────────────────────────────────────────── */
+  .reveal {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+    transition:
+      opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+  .hover-lift {
+    transition:
+      transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 260ms ease,
+      border-color 260ms ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* the published portfolio carries its own accent through --pf */
+  .pf-hover:hover {
+    color: var(--pf);
+  }
+  .pf-border-hover:hover {
+    border-color: var(--pf);
+  }
+
+  /* the dot that marks a live, working thing */
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: hsl(var(--accent));
+    box-shadow: 0 0 0 3px hsl(var(--accent) / 0.16);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* The print route shows one sheet and nothing else. */
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html,
+  body {
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-sheet {
+    box-shadow: none !important;
+    margin: 0 !important;
+    border: 0 !important;
+    break-inside: avoid;
+  }
+}
