@@ -28,8 +28,8 @@ const COLUMNS = [
     links: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
+      { label: "Company Verification", href: "/verify" },
       { label: "Sign in", href: "/auth/sign-in" },
-      { label: "Create account", href: "/auth/sign-up" },
     ],
   },
 ];
