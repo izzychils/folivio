@@ -43,9 +43,9 @@ export function PortfolioView({
           </span>
           <nav className="hidden items-center gap-7 sm:flex">
             {[
-              { href: "#work", label: "Work" },
-              { href: "#about", label: "About" },
-              { href: "#contact", label: "Contact" },
+              { href: "/work", label: "Work" },
+              { href: "/about", label: "About" },
+              { href: "/contact", label: "Contact" },
             ].map((item) => (
               <a
                 key={item.href}
@@ -104,7 +104,7 @@ export function PortfolioView({
               </span>
             ) : null}
             <a
-              href="#work"
+              href="/work"
               className="inline-flex items-center gap-1.5 text-[11.5px] font-medium"
               style={{ color: accent }}
             >

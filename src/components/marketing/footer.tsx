@@ -8,10 +8,10 @@ const COLUMNS = [
     title: "Product",
     links: [
       { label: "Everything included", href: "/products" },
-      { label: "CV studio", href: "/#product" },
-      { label: "Intelligence", href: "/#intelligence" },
-      { label: "Templates", href: "/#templates" },
-      { label: "Pricing", href: "/#pricing" },
+      { label: "CV studio", href: "/product" },
+      { label: "Intelligence", href: "/intelligence" },
+      { label: "Templates", href: "/templates" },
+      { label: "Pricing", href: "/pricing" },
     ],
   },
   {
@@ -20,7 +20,7 @@ const COLUMNS = [
       { label: "About", href: "/about" },
       { label: "Products", href: "/products" },
       { label: "Contact", href: "/contact" },
-      { label: "FAQ", href: "/#faq" },
+      { label: "FAQ", href: "/faq" },
     ],
   },
   {

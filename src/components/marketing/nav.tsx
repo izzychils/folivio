@@ -10,11 +10,11 @@ import { cn } from "@/lib/utils";
 
 const LINKS = [
   { href: "/products", label: "Products" },
-  { href: "/#intelligence", label: "Intelligence" },
-  { href: "/#templates", label: "Templates" },
+  { href: "/intelligence", label: "Intelligence" },
+  { href: "/templates", label: "Templates" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
-  { href: "/#pricing", label: "Pricing" },
+  { href: "/pricing", label: "Pricing" },
 ];
 
 export function MarketingNav() {
