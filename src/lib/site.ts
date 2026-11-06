@@ -6,7 +6,7 @@
 export const site = {
   name: "Folivio",
   domain: "folivio.online",
-  url: "https://folivio.online",
+  url: "https://www.folivio.online",
   tagline: "Career intelligence for people who have done the work",
   description:
     "Folivio turns a career into a CV and portfolio that reads well: an AI-assisted studio, editorial templates and intelligence that works from your real experience.",
