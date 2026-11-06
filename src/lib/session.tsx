@@ -44,7 +44,7 @@ const SessionContext = createContext<SessionContextValue | null>(null);
 
 const DEMO_ACCOUNT = {
   name: "Amara Okonkwo",
-  email: "sample@folivio.app",
+  email: "sample@folivio.online",
   password: "sample-career",
 };
 

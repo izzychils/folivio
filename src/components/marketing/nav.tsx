@@ -9,11 +9,12 @@ import { useSession } from "@/lib/session";
 import { cn } from "@/lib/utils";
 
 const LINKS = [
-  { href: "#product", label: "Product" },
-  { href: "#intelligence", label: "Intelligence" },
-  { href: "#templates", label: "Templates" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/products", label: "Products" },
+  { href: "/#intelligence", label: "Intelligence" },
+  { href: "/#templates", label: "Templates" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/#pricing", label: "Pricing" },
 ];
 
 export function MarketingNav() {

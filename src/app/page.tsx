@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {
   ArrowRight,
-  ArrowUpRight,
   Check,
   FileText,
   Globe,
@@ -12,10 +11,10 @@ import {
   Sparkles,
 } from "lucide-react";
 import { MarketingNav } from "@/components/marketing/nav";
+import { Footer } from "@/components/marketing/footer";
 import { Reveal } from "@/components/marketing/reveal";
 import { MarketingFaq } from "@/components/marketing/faq";
 import { MarketingIntelligence } from "@/components/marketing/intelligence";
-import { Wordmark } from "@/components/ui/logo";
 import { buttonClass } from "@/lib/button";
 import { ScoreRing } from "@/components/ui/surface";
 import { CvThumbnail } from "@/components/cv/preview";
@@ -599,8 +598,8 @@ export default function LandingPage() {
               </h2>
               <p className="mt-4 max-w-[320px] text-[12px] leading-relaxed text-muted">
                 Still unsure? Write to{" "}
-                <a href="mailto:hello@folivio.app" className="text-ink underline decoration-line underline-offset-4">
-                  hello@folivio.app
+                <a href="mailto:hello@folivio.online" className="text-ink underline decoration-line underline-offset-4">
+                  hello@folivio.online
                 </a>
                 . A person reads it.
               </p>
@@ -642,62 +641,7 @@ export default function LandingPage() {
         </Reveal>
       </section>
 
-      {/* ── footer ───────────────────────────────────────────────────────── */}
-      <footer className="border-t border-line">
-        <div className="mx-auto max-w-[1180px] px-5 py-12 sm:px-8">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-            <div>
-              <Wordmark />
-              <p className="mt-3 max-w-[260px] text-[11.5px] leading-relaxed text-muted">
-                Career intelligence for people whose experience deserves better presentation.
-              </p>
-            </div>
-            <div>
-              <p className="eyebrow mb-3 text-[8.5px]">Product</p>
-              <ul className="space-y-2 text-[11.5px] text-muted">
-                <li><a href="#product" className="transition-colors hover:text-ink">CV studio</a></li>
-                <li><a href="#intelligence" className="transition-colors hover:text-ink">Intelligence</a></li>
-                <li><a href="#templates" className="transition-colors hover:text-ink">Templates</a></li>
-                <li><a href="#pricing" className="transition-colors hover:text-ink">Pricing</a></li>
-              </ul>
-            </div>
-            <div>
-              <p className="eyebrow mb-3 text-[8.5px]">Workspace</p>
-              <ul className="space-y-2 text-[11.5px] text-muted">
-                <li><Link href="/auth/sign-in" className="transition-colors hover:text-ink">Sign in</Link></li>
-                <li><Link href="/auth/sign-up" className="transition-colors hover:text-ink">Create account</Link></li>
-                <li><Link href="/dashboard" className="transition-colors hover:text-ink">Dashboard</Link></li>
-                <li><a href="#faq" className="transition-colors hover:text-ink">FAQ</a></li>
-              </ul>
-            </div>
-            <div>
-              <p className="eyebrow mb-3 text-[8.5px]">Contact</p>
-              <ul className="space-y-2 text-[11.5px] text-muted">
-                <li>
-                  <a href="mailto:hello@folivio.app" className="transition-colors hover:text-ink">
-                    hello@folivio.app
-                  </a>
-                </li>
-                <li>
-                  <Link href="/dashboard/portfolio" className="transition-colors hover:text-ink">
-                    Portfolio builder
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5">
-            <p className="text-[10px] text-muted">© {new Date().getFullYear()} Folivio. Built for people who have done the work.</p>
-            <div className="flex items-center gap-4">
-              <span className="text-[10px] text-muted">Preview build, data stays in this browser</span>
-              <Link href="/auth/sign-up" className="inline-flex items-center gap-1 text-[10px] text-ink">
-                Start free <ArrowUpRight className="h-2.5 w-2.5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
