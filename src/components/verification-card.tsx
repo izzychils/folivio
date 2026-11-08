@@ -366,23 +366,6 @@ export function VerificationCard() {
           </button>
         </div>
       )}
-
-      {/* Quick Demo Info */}
-      <div className="mt-6 rounded-lg border border-line bg-surface/50 p-5 text-center">
-        <p className="mb-3 text-[11.5px] text-muted">
-          Try a sample Registration ID:
-        </p>
-        <button
-          onClick={() => {
-            setRegIdValue("738291");
-            setResult(null);
-            setNotFound(false);
-          }}
-          className="rounded-lg border border-line bg-card px-4 py-2 font-mono text-[12px] font-medium text-ink transition hover:bg-surface"
-        >
-          738291
-        </button>
-      </div>
     </div>
   );
 }
