@@ -28,7 +28,7 @@ const COLUMNS = [
     links: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
-      { label: "Company Verification", href: "/verify" },
+      // { label: "Company Verification", href: "/verify" },
       { label: "Sign in", href: "/auth/sign-in" },
     ],
   },
@@ -41,10 +41,10 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Wordmark />
-            <p className="mt-3 max-w-[260px] text-[11.5px] leading-relaxed text-muted">
+            <p className="mt-4 max-w-[260px] text-[11.5px] leading-relaxed text-muted">
               Career intelligence for people whose experience deserves better presentation.
             </p>
-            <p className="mt-4 text-[11px] font-medium text-ink">{site.companyLine}</p>
+            {/* <p className="mt-4 text-[11.5px] font-medium text-ink">{site.companyLine}</p> */}
             <p className="mt-2 text-[11.5px] text-muted">
               <a
                 href={`mailto:${site.email}`}
@@ -75,7 +75,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5">
           <p className="text-[10px] text-muted">
-            © {new Date().getFullYear()} {site.company}. {site.name} is a product of {site.company}.
+            © {new Date().getFullYear()} {site.company}. {/* {site.name} is a product of {site.company}. */}
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <span className="text-[10px] text-muted">{site.domain}</span>
