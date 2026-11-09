@@ -6,7 +6,7 @@ import { PageShell, Section, Bullets } from "@/components/marketing/page-shell";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Folivio is an AI CV and portfolio studio from Ivents, built for people whose experience deserves better presentation.",
+    "Folivio is an AI CV and portfolio studio built for people whose experience deserves better presentation.", // "Folivio is an AI CV and portfolio studio from Ivents, built for people whose experience deserves better presentation.",
 };
 
 export default function AboutPage() {
