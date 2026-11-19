@@ -33,7 +33,7 @@ export default function TermsPage() {
       <Section title="Your content stays yours">
         <p>
           You own the career history, documents and portfolio material you create. We claim no
-          ownership over it. You are responsible for the accuracy of what you publish — Folivio
+          ownership over it. You are responsible for the accuracy of what you publish - Folivio
           presents your claims, it does not verify employers, dates, qualifications or metrics.
         </p>
       </Section>

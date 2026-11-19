@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   publisher: "Folivio",
   applicationName: "Folivio",
   openGraph: {
-    title: "Folivio — career intelligence for people who have done the work",
+    title: "Folivio: career intelligence for people who have done the work",
     description:
       "Career intelligence for people whose experience deserves better presentation.",
     url: "https://www.folivio.online",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Folivio — your experience deserves better presentation",
+    title: "Folivio: your experience deserves better presentation",
     description:
       "Turn real experience into a CV and portfolio that reads well: editorial templates, an AI-assisted studio and intelligence that never invents a fact.",
   },

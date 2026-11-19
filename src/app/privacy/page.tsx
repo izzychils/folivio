@@ -55,7 +55,7 @@ export default function PrivacyPage() {
 
       <Section title="Your CV content">
         <p>
-          Career history is personal data and often reveals more than intended — dates of
+          Career history is personal data and often reveals more than intended - dates of
           employment, education, sometimes health or family context. In a live {site.name}
           deployment, your documents would be stored on a server you can export from and delete,
           and would never be used to train a model without your explicit choice.

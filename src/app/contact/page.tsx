@@ -5,7 +5,7 @@ import { PageShell, Section } from "@/components/marketing/page-shell";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Contact ${site.company} about Folivio — the CV studio, portfolio builder, licensing or support.`,
+  description: `Contact ${site.company} about Folivio - the CV studio, portfolio builder, licensing or support.`,
 };
 
 export default function ContactPage() {
@@ -24,8 +24,8 @@ export default function ContactPage() {
           >
             {site.email}
           </a>{" "}
-          is read by {site.company}. Tell us what you are trying to do — build a CV, publish a
-          portfolio, run a cohort — and you will get an answer about your case rather than a link to
+          is read by {site.company}. Tell us what you are trying to do - build a CV, publish a
+          portfolio, run a cohort - and you will get an answer about your case rather than a link to
           a help centre.
         </p>
       </Section>

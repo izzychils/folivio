@@ -44,7 +44,7 @@ export default function AboutPage() {
       <Section title="How the intelligence works">
         <p>
           The assistant works from what you have entered. It suggests structure, tightens language
-          and points at gaps — it does not fabricate employers, metrics or qualifications. Every
+          and points at gaps - it does not fabricate employers, metrics or qualifications. Every
           suggestion is shown to you before it lands in the document, and you can reject any line
           you would not defend in an interview.
         </p>

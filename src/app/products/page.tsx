@@ -20,7 +20,7 @@ const products = [
   {
     name: "Editorial templates",
     audience: "For how it looks",
-    copy: "Document templates designed like a career publication — hairline rules, an editorial serif for statements, a tight grotesque for the details. Not a decorated form.",
+    copy: "Document templates designed like a career publication - hairline rules, an editorial serif for statements, a tight grotesque for the details. Not a decorated form.",
     points: ["Print-accurate layouts", "Type-first design", "One-page to long-form"],
   },
   {
@@ -32,7 +32,7 @@ const products = [
   {
     name: "Portfolio builder",
     audience: "For showing the work",
-    copy: "Turn the same material into a shareable page with project detail, links and evidence — the context a CV bullet cannot carry.",
+    copy: "Turn the same material into a shareable page with project detail, links and evidence - the context a CV bullet cannot carry.",
     points: ["Shareable link", "Project detail", "Case-study layout"],
   },
 ];
